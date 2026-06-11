@@ -1,0 +1,7 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Not needed on the live site (kept locally as deliverables)
+assets/extracted/
+assets/files/
