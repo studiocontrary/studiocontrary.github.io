@@ -16,9 +16,9 @@ ROOT = pathlib.Path(__file__).parent
 #  CONTENT
 # --------------------------------------------------------------------------- #
 SITE = {
-    "name":    "Shannon Craver",
-    "role":    "Freelance UX / UI Design & Direction",
-    "tagline": "Crafting extraordinary brands & experiences from the ground up.",
+    "name":    "Studio Contrary",
+    "role":    "Design & Creative Direction",
+    "tagline": "The work of freelance designer and creative director Shannon Craver.",
     "email":   "shannon@studiocontrary.com",
     "pdf":     "assets/files/ShannonCraver_Portfolio_2023.pdf",
     "socials": [
@@ -288,7 +288,7 @@ def header(home):
     brand_href = (home or "#top")
     return f"""<header class="site-header" id="top">
   <div class="wrap">
-    <a class="brand" href="{brand_href}">Shannon Craver</a>
+    <a class="brand" href="{brand_href}">Studio Contrary</a>
     <nav class="nav" aria-label="Primary">
       <a href="{base}#work">Work</a>
       <a href="{base}#about">About</a>
@@ -318,7 +318,7 @@ def contact_and_footer(root):
 </section>
 <footer class="site-footer">
   <div class="wrap">
-    <span>© <span data-year>2023</span> Shannon Craver — {SITE['role']}</span>
+    <span>© <span data-year>2023</span> Studio Contrary — {SITE['role']}</span>
     <a class="to-top" href="#top">Back to top
       <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
     </a>
@@ -334,10 +334,11 @@ def contact_and_footer(root):
 def build_index():
     root = ""
     og = "assets/spreads/full/p22.jpg"
-    parts = [head(f"{SITE['name']} — UX / UI Designer &amp; Director",
-                  "Freelance UX/UI designer and creative director. 10+ years crafting "
-                  "brands, digital products and experiences for startups, businesses and "
-                  "agencies across the UK, USA and Canada.", root, og)]
+    parts = [head("Studio Contrary — Shannon Craver, Design &amp; Creative Direction",
+                  "Studio Contrary is the studio of freelance designer and creative director "
+                  "Shannon Craver — 10+ years crafting brands, digital products and "
+                  "experiences for startups, businesses and agencies across the UK, USA and "
+                  "Canada.", root, og)]
     parts.append("<body>")
     parts.append(header(""))
 
@@ -345,8 +346,8 @@ def build_index():
     parts.append(f"""<main>
 <section class="hero" data-hero>
   <div class="wrap">
-    <p class="eyebrow on-dark">{SITE['role']}</p>
-    <h1>Shannon<br>Craver</h1>
+    <p class="eyebrow on-dark">Independent design studio</p>
+    <h1>Studio<br>Contrary</h1>
     <p class="lede">{SITE['tagline']}</p>
     <div class="cta-row">
       <a class="link-arrow" href="#work">Selected work {ARROW}</a>
@@ -465,7 +466,7 @@ def build_project(i, p):
       <figcaption><span class="n">{n:02d}</span> {cap} <span class="zoom">Click to enlarge</span></figcaption>
     </figure>""")
 
-    parts = [head(f"{plain_title} — Shannon Craver",
+    parts = [head(f"{plain_title} — Studio Contrary",
                   p["tagline"].replace("&amp;", "&").replace("<em>", "").replace("</em>", ""),
                   root, full(p["hero"], root))]
     parts.append("<body>")
